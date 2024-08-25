@@ -12,7 +12,6 @@ function App() {
           <Route index element={<Landing />}></Route>
           <Route path="/portfolio" element={<Landing />}></Route>
           <Route path="/projects" element={<Projects />}></Route>
-          <Route path="*" element={<Landing />}></Route>
         </Routes>
       </BrowserRouter>
     </Box>

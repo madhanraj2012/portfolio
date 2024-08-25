@@ -18,7 +18,7 @@ export const LandingImageView = () => {
           maxWidth: "600px",
         }}
         alt="Image"
-        src="./boy_working.svg"
+        src="/portfolio/boy_working.svg"
       />
     </Box>
   );
