@@ -23,7 +23,7 @@ export const NavBar = () => {
 const NavBarTitle = () => {
   return (
     <Link
-      href="https://your-portfolio-url.com"
+      href="https://madhanraj2012.github.io/portfolio/"
       underline="none"
       rel="noopener noreferrer"
     >
