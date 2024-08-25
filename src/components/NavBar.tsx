@@ -1,13 +1,7 @@
-import {
-  AppBar,
-  IconButton,
-  Link,
-  Stack,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, IconButton, Stack, Toolbar, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GMailIcon from "@mui/icons-material/Mail";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
@@ -22,11 +16,7 @@ export const NavBar = () => {
 
 const NavBarTitle = () => {
   return (
-    <Link
-      href="https://madhanraj2012.github.io/portfolio/"
-      underline="none"
-      rel="noopener noreferrer"
-    >
+    <Link to="/portfolio" style={{ textDecoration: "none" }}>
       <Typography sx={{ color: "#000", textAlign: "start" }}>
         PORTFOLIO
       </Typography>
@@ -53,21 +43,18 @@ interface LinkButtonProps {
 
 const LinkButton: React.FC<LinkButtonProps> = ({ Icon, href }) => {
   return (
-    <Link
+    <IconButton
+      component="a"
       href={href}
-      underline="none"
       target="_blank"
       rel="noopener noreferrer"
+      sx={{
+        "&:hover": {
+          backgroundColor: "transparent",
+        },
+      }}
     >
-      <IconButton
-        sx={{
-          "&:hover": {
-            backgroundColor: "transparent",
-          },
-        }}
-      >
-        <Icon />
-      </IconButton>
-    </Link>
+      <Icon />
+    </IconButton>
   );
 };

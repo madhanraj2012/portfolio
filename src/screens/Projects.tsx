@@ -1,6 +1,10 @@
 import { Box } from "@mui/material";
 import { NavBar } from "../components/NavBar";
 
-export function Projects() {
-  return <Box></Box>;
+export default function Projects() {
+  return (
+    <Box>
+      <NavBar />
+    </Box>
+  );
 }

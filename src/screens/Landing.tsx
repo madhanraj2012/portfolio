@@ -3,8 +3,9 @@ import { ActionButton } from "../components/ActionButton";
 import { ChipView } from "../components/ChipView";
 import { LandingImageView } from "../components/LandingImageView";
 import { NavBar } from "../components/NavBar";
+import { Link } from "react-router-dom";
 
-export const Landing = () => {
+export default function Landing() {
   return (
     <Box>
       <NavBar />
@@ -37,7 +38,7 @@ export const Landing = () => {
       </Container>
     </Box>
   );
-};
+}
 
 const NameAndRoleView = () => {
   return (
@@ -60,7 +61,9 @@ const NameAndRoleView = () => {
 const ButtonView = () => {
   return (
     <Stack direction="row" spacing={2} marginTop={6} justifyContent="center">
-      <ActionButton name="View Projects"></ActionButton>
+      <Link to="/projects" style={{ textDecoration: "none" }}>
+        <ActionButton name="View Projects"></ActionButton>
+      </Link>
       <a href={"./madhan_raj_resume_2024.pdf"} download>
         <ActionButton name="Download Resume" />
       </a>
