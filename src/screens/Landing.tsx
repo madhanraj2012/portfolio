@@ -4,6 +4,7 @@ import { ChipView } from "../components/ChipView";
 import { LandingImageView } from "../components/LandingImageView";
 import { NavBar } from "../components/NavBar";
 import { Link } from "react-router-dom";
+import { TitleDescriptionView } from "../components/TitleDescriptionView";
 
 export default function Landing() {
   return (
@@ -37,7 +38,7 @@ const InfoView = () => {
         textAlign: "center",
       }}
     >
-      <NameAndRoleView />
+      <TitleDescriptionView title="Madhan Raj" desc="Android App Developer" />
 
       <ChipView names={["Kotlin", "Jetpack Compose", "Ktor", "Spring"]} />
       <ChipView names={["XMPP", "WebSockets", "VoIP"]} />
@@ -45,24 +46,6 @@ const InfoView = () => {
       <ChipView names={["GitHub", "Firebase", "AWS S3"]} />
 
       <ButtonView />
-    </Box>
-  );
-};
-
-const NameAndRoleView = () => {
-  return (
-    <Box>
-      <Typography variant="h4" component="div">
-        Madhan Raj
-      </Typography>
-
-      <Typography
-        variant="subtitle1"
-        component="div"
-        sx={{ color: "grey", marginBottom: 2 }}
-      >
-        Android App Developer
-      </Typography>
     </Box>
   );
 };
