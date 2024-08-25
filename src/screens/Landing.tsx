@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography, Chip, Button } from "@mui/material";
+import { Box, Container, Stack, Typography, Button } from "@mui/material";
 import { ActionButton } from "../components/ActionButton";
 import { ChipView } from "../components/ChipView";
 import { LandingImageView } from "../components/LandingImageView";
@@ -12,33 +12,42 @@ export default function Landing() {
       <Container
         maxWidth="lg"
         sx={{
-          display: "flex",
-          alignItems: "center",
           padding: 2,
         }}
       >
-        <LandingImageView />
-
-        <Box
-          sx={{
-            flex: 1,
-            textAlign: "center",
-            paddingLeft: 2,
-          }}
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          spacing={2}
+          alignItems="center"
         >
-          <NameAndRoleView />
+          <LandingImageView />
 
-          <ChipView names={["Kotlin", "Jetpack Compose", "Ktor", "Spring"]} />
-          <ChipView names={["XMPP", "WebSockets", "VoIP"]} />
-          <ChipView names={["Room", "Realm", "Junit4", "Mockito"]} />
-          <ChipView names={["GitHub", "Firebase", "AWS S3"]} />
-
-          <ButtonView />
-        </Box>
+          <InfoView />
+        </Stack>
       </Container>
     </Box>
   );
 }
+
+const InfoView = () => {
+  return (
+    <Box
+      sx={{
+        flex: 1,
+        textAlign: "center",
+      }}
+    >
+      <NameAndRoleView />
+
+      <ChipView names={["Kotlin", "Jetpack Compose", "Ktor", "Spring"]} />
+      <ChipView names={["XMPP", "WebSockets", "VoIP"]} />
+      <ChipView names={["Room", "Realm", "Junit4", "Mockito"]} />
+      <ChipView names={["GitHub", "Firebase", "AWS S3"]} />
+
+      <ButtonView />
+    </Box>
+  );
+};
 
 const NameAndRoleView = () => {
   return (
