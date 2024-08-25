@@ -16,7 +16,7 @@ export default function Landing() {
         }}
       >
         <Stack
-          direction={{ xs: "column", sm: "row" }}
+          direction={{ sm: "column", md: "row" }}
           spacing={2}
           alignItems="center"
         >
