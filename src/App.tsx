@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-import { NavBar } from "./components/NavBar";
 import Landing from "./screens/Landing";
 import Projects from "./screens/Projects";
 
@@ -8,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <Box>
       <BrowserRouter>
         <Routes>
           <Route index element={<Landing />}></Route>
@@ -17,7 +15,7 @@ function App() {
           <Route path="*" element={<Landing />}></Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </Box>
   );
 }
 
