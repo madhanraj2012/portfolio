@@ -45,7 +45,7 @@ const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
     <Card
       sx={{
         borderRadius: "16px",
-        marginBottom: 8, // Increased vertical spacing
+        marginBottom: 6, // Increased vertical spacing
         width: {
           xs: "90%",
           sm: "70%",
@@ -56,6 +56,7 @@ const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
         marginRight: "auto",
         border: "2px solid black", // Added black border
         boxShadow: "none", // Removed elevation
+        paddingY: 2,
       }}
       style={{ background: "white" }} // Removed bicolor background
     >
