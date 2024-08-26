@@ -8,9 +8,9 @@ import {
 } from "@mui/material";
 import { NavBar } from "../components/NavBar";
 import { ProjectImageView } from "../components/ProjectImageView";
-import { ChipView } from "../components/ChipView";
 import { ActionButton } from "../components/ActionButton";
 import { TitleDescriptionView } from "../components/TitleDescriptionView";
+import { ProjectChipView } from "../components/ProjectChipView";
 
 enum Project {
   JUGL,
@@ -97,11 +97,13 @@ const JuglDetails = () => {
         desc="Features worked on:"
       />
 
-      <ChipView names={["Employee Management", "Client Management"]} />
-      <ChipView
+      <ProjectChipView names={["Employee Management", "Client Management"]} />
+      <ProjectChipView
         names={["Voice & Video Call", "Video Conference", "Reactions"]}
       />
-      <ChipView names={["Chat Attachments", "Image & Video Compression"]} />
+      <ProjectChipView
+        names={["Chat Attachments", "Image & Video Compression"]}
+      />
 
       <ButtonView link="https://play.google.com/store/apps/details?id=com.jugl" />
     </Box>
@@ -118,7 +120,7 @@ const ToonmojiDetails = () => {
     >
       <TitleDescriptionView title="Toonmoji" desc="Skills used:" />
 
-      <ChipView names={["Jetpack Compose", "Swift UI"]} />
+      <ProjectChipView names={["Jetpack Compose", "Swift UI"]} />
 
       <ButtonView link="https://play.google.com/store/apps/details?id=app.toonmoji.android" />
     </Box>
@@ -135,8 +137,8 @@ const MagicBoxDetails = () => {
     >
       <TitleDescriptionView title="Magicbox Apps" desc="Skills used:" />
 
-      <ChipView names={["HLS Streaming", "Media3", "Rest API"]} />
-      <ChipView names={["In-App purchase", "Subscription"]} />
+      <ProjectChipView names={["HLS Streaming", "Media3", "Rest API"]} />
+      <ProjectChipView names={["In-App purchase", "Subscription"]} />
 
       <ButtonView link="https://play.google.com/store/apps/details?id=com.magicbox.english&hl=en" />
     </Box>
