@@ -42,9 +42,10 @@ export default function Projects() {
 
 const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
   return (
-    <Card
+    <Box
       sx={{
         borderRadius: "16px",
+        border: "2px solid black",
         marginBottom: 6,
         width: {
           xs: "90%",
@@ -55,9 +56,8 @@ const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
         marginLeft: "auto",
         marginRight: "auto",
       }}
-      style={{ background: "#f2f6fc" }}
     >
-      <CardContent>
+      <Box paddingY={4} paddingX={2}>
         <Stack
           direction={{ sm: "column", md: "column" }}
           spacing={{
@@ -76,8 +76,8 @@ const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
             <MagicBoxDetails />
           )}
         </Stack>
-      </CardContent>
-    </Card>
+      </Box>
+    </Box>
   );
 };
 
