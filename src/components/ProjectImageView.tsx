@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography, Chip, Button } from "@mui/material";
+import { Box } from "@mui/material";
 
 export const ProjectImageView = ({ path = "" }) => {
   return (
@@ -15,7 +15,11 @@ export const ProjectImageView = ({ path = "" }) => {
         sx={{
           width: "100%",
           height: "auto",
-          maxWidth: "300px",
+          maxWidth: "150px",
+          borderRadius: "50%", // Circular crop
+          backgroundColor: "#fff", // White background
+          padding: "5px", // Optional padding to make sure the background is visible
+          boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Optional shadow for better appearance
         }}
         alt="Image"
         src={path}
