@@ -43,13 +43,28 @@ export default function Projects() {
 const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
   return (
     <Card
-      sx={{ borderRadius: "16px", margin: 6 }}
+      sx={{
+        borderRadius: "16px",
+        marginBottom: 6,
+        width: {
+          xs: "90%",
+          sm: "70%",
+          md: "60%",
+          lg: "50%",
+        },
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
       style={{ background: "#f2f6fc" }}
     >
       <CardContent>
         <Stack
           direction={{ sm: "column", md: "column" }}
-          spacing={2}
+          spacing={{
+            xs: 4, // Increase spacing on extra-small screens (mobile)
+            sm: 6, // Larger spacing on small screens (tablets)
+            md: 2, // Default spacing on medium screens
+          }}
           alignItems="center"
         >
           <ProjectImageView path={path} />

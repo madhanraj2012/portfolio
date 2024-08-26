@@ -16,10 +16,10 @@ export const ProjectImageView = ({ path = "" }) => {
           width: "100%",
           height: "auto",
           maxWidth: "150px",
-          borderRadius: "50%", // Circular crop
-          backgroundColor: "#fff", // White background
-          padding: "5px", // Optional padding to make sure the background is visible
-          boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)", // Optional shadow for better appearance
+          borderRadius: "50%",
+          backgroundColor: "#fff",
+          padding: "5px",
+          boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
         }}
         alt="Image"
         src={path}
