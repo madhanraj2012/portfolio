@@ -42,11 +42,10 @@ export default function Projects() {
 
 const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
   return (
-    <Box
+    <Card
       sx={{
         borderRadius: "16px",
-        border: "2px solid black",
-        marginBottom: 6,
+        marginBottom: 8, // Increased vertical spacing
         width: {
           xs: "90%",
           sm: "70%",
@@ -55,13 +54,16 @@ const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
         },
         marginLeft: "auto",
         marginRight: "auto",
+        border: "2px solid black", // Added black border
+        boxShadow: "none", // Removed elevation
       }}
+      style={{ background: "white" }} // Removed bicolor background
     >
-      <Box paddingY={4} paddingX={2}>
+      <CardContent>
         <Stack
           direction={{ sm: "column", md: "column" }}
           spacing={{
-            xs: 4, // Increase spacing on extra-small screens (mobile)
+            xs: 4, // Increased spacing on extra-small screens (mobile)
             sm: 6, // Larger spacing on small screens (tablets)
             md: 2, // Default spacing on medium screens
           }}
@@ -76,8 +78,8 @@ const ProjectDetails = ({ type = Project.JUGL, path = "" }) => {
             <MagicBoxDetails />
           )}
         </Stack>
-      </Box>
-    </Box>
+      </CardContent>
+    </Card>
   );
 };
 
