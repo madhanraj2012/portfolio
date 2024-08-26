@@ -53,10 +53,10 @@ const InfoView = () => {
 const ButtonView = () => {
   return (
     <Stack direction="row" spacing={2} marginTop={6} justifyContent="center">
-      <Link to="/projects" style={{ textDecoration: "none" }}>
+      <Link to="/portfolio/projects" style={{ textDecoration: "none" }}>
         <ActionButton name="View Projects"></ActionButton>
       </Link>
-      <a href={"./madhan_raj_resume_2024.pdf"} download>
+      <a href={"portfolio/madhan_raj_resume_2024.pdf"} download>
         <ActionButton name="Download Resume" />
       </a>
     </Stack>
